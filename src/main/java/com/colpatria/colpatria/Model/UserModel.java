@@ -11,14 +11,14 @@ package com.colpatria.colpatria.Model;
  */
 public class UserModel {
     
-    private long id;
+    private Long id;
     private String nombre;
     private String email;
     private Integer prioridad;
     private String tel;
     private String lastName;
 
-    public UserModel(long id, String nombre, String email, Integer prioridad, String tel, String lastName) {
+    public UserModel(Long id, String nombre, String email, Integer prioridad, String tel, String lastName) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -27,11 +27,11 @@ public class UserModel {
         this.lastName = lastName;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
