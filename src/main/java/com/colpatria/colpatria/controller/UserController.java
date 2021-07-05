@@ -30,7 +30,8 @@ public class UserController {
     public Estructure about(){
         
        try {
-            ArrayList<UserModel> users = this.userService.listUser();
+       
+            ArrayList<UserModel> users =  (ArrayList<UserModel>) this.userService.findAll();
             ArrayList<Data> listdata  = new ArrayList<Data>();
             Data data = new Data();
             data.setRows(users);

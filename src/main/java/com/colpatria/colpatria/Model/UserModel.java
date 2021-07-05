@@ -5,12 +5,21 @@
  */
 package com.colpatria.colpatria.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.*;
+
+
 /**
  *
  * @author Ricardo
  */
+@Entity
+@Table(name = "usuario")
 public class UserModel {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true , nullable = false)
     private Long id;
     private String nombre;
     private String email;
@@ -27,6 +36,8 @@ public class UserModel {
         this.lastName = lastName;
     }
 
+    public UserModel(){}
+    
     public Long getId() {
         return id;
     }

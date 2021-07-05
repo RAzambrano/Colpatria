@@ -7,6 +7,8 @@ package com.colpatria.colpatria.Repository;
 
 import com.colpatria.colpatria.Model.UserModel;
 import java.util.ArrayList;
+import org.springframework.data.repository.CrudRepository;
+
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,7 +16,6 @@ import org.springframework.stereotype.Repository;
  * @author Ricardo
  */
 @Repository
-public interface UserRepository {
-    
-    public ArrayList<UserModel> listUser ();
+public interface UserRepository extends  CrudRepository<UserModel, Long>{
+    /* public ArrayList<UserModel> listUser() ;*/
 }
