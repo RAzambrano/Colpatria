@@ -5,6 +5,10 @@
  */
 package com.colpatria.colpatria.controller;
 
+import com.colpatria.colpatria.util.Data;
+import com.colpatria.colpatria.util.Estructure;
+import java.util.ArrayList;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +22,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     
     @GetMapping()
-    public String about(){
+    public Estructure about(){
         
-        return "hola_mundo";
+           try {
+                                      
+         return new Estructure(true,"Conexion con exito",HttpStatus.OK.value(),new ArrayList<Data>());
+           
+           
+        } catch (Exception ex) {
+            return new Estructure(false,ex.getMessage(),HttpStatus.NOT_ACCEPTABLE.value(),new ArrayList<Data>());
+        }
        
     }
     
