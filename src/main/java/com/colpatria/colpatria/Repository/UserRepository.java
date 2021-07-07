@@ -6,9 +6,7 @@
 package com.colpatria.colpatria.Repository;
 
 import com.colpatria.colpatria.Model.UserModel;
-import java.util.ArrayList;
 import org.springframework.data.repository.CrudRepository;
-
 import org.springframework.stereotype.Repository;
 
 /**

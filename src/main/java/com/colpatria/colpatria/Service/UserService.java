@@ -24,15 +24,12 @@ public class UserService  {
    
     public ArrayList<UserModel> findAll() {
         ArrayList<UserModel> users = new ArrayList<>();
-        
-        /*UserModel user1 = new UserModel(Long.parseLong("5"),"Ricardo", "r@gmail.com",1,"123456","Zambrano");
-        UserModel user2 = new UserModel(Long.parseLong("4"),"Alfonso", "a@gmail.com",1,"123456","Daza");
-        users.add(user1);
-        users.add(user2);*/
         users = (ArrayList<UserModel>) this.userRespository.findAll();
         return users;
         }
 
-  
+    public Optional<UserModel>fiddById(Long id){
+        return this.userRespository.findById(id);
+    }  
     
 }

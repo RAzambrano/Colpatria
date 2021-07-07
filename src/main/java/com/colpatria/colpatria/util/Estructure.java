@@ -8,17 +8,17 @@ public class Estructure {
         private String message;
         private Integer responseCode;
        // private int total;
-        private ArrayList<Data> data;
+        private Data data;
         //private Data data;
 
 
-        public Estructure(boolean estate, String message, ArrayList<Data> data) {
+        public Estructure(boolean estate, String message, Data data) {
             this.state = estate;
             this.message = message;
             this.data = data;
         }
     
-        public Estructure(boolean state, String message, Integer responseCode, ArrayList<Data> data) {
+        public Estructure(boolean state, String message, Integer responseCode, Data data) {
             this.state = state;
             this.message = message;
             this.responseCode = responseCode;
@@ -79,14 +79,14 @@ public class Estructure {
     /**
      * @return ArrayList<Data> return the data
      */
-    public ArrayList<Data> getData() {
+    public Data getData() {
         return data;
     }
 
     /**
      * @param data the data to set
      */
-    public void setData(ArrayList<Data> data) {
+    public void setData(Data data) {
         this.data = data;
     }
 
